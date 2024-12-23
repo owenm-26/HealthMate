@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		1FDAE6F12D1A0586001DF5EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FDAE6D82D1A0585001DF5EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FDAE6DF2D1A0585001DF5EB;
+			remoteInfo = HealthMate;
+		};
+		1FDAE6FB2D1A0586001DF5EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FDAE6D82D1A0585001DF5EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FDAE6DF2D1A0585001DF5EB;
+			remoteInfo = HealthMate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FDAE6E02D1A0585001DF5EB /* HealthMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FDAE6F02D1A0586001DF5EB /* HealthMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FDAE6FA2D1A0586001DF5EB /* HealthMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1FDAE6E22D1A0585001DF5EB /* HealthMate */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HealthMate;
+			sourceTree = "<group>";
+		};
+		1FDAE6F32D1A0586001DF5EB /* HealthMateTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HealthMateTests;
+			sourceTree = "<group>";
+		};
+		1FDAE6FD2D1A0586001DF5EB /* HealthMateUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HealthMateUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FDAE6DD2D1A0585001DF5EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDAE6ED2D1A0586001DF5EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDAE6F72D1A0586001DF5EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FDAE6D72D1A0585001DF5EB = {
+			isa = PBXGroup;
+			children = (
+				1FDAE6E22D1A0585001DF5EB /* HealthMate */,
+				1FDAE6F32D1A0586001DF5EB /* HealthMateTests */,
+				1FDAE6FD2D1A0586001DF5EB /* HealthMateUITests */,
+				1FDAE6E12D1A0585001DF5EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FDAE6E12D1A0585001DF5EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAE6E02D1A0585001DF5EB /* HealthMate.app */,
+				1FDAE6F02D1A0586001DF5EB /* HealthMateTests.xctest */,
+				1FDAE6FA2D1A0586001DF5EB /* HealthMateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FDAE6DF2D1A0585001DF5EB /* HealthMate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FDAE7042D1A0586001DF5EB /* Build configuration list for PBXNativeTarget "HealthMate" */;
+			buildPhases = (
+				1FDAE6DC2D1A0585001DF5EB /* Sources */,
+				1FDAE6DD2D1A0585001DF5EB /* Frameworks */,
+				1FDAE6DE2D1A0585001DF5EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1FDAE6E22D1A0585001DF5EB /* HealthMate */,
+			);
+			name = HealthMate;
+			packageProductDependencies = (
+			);
+			productName = HealthMate;
+			productReference = 1FDAE6E02D1A0585001DF5EB /* HealthMate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FDAE6EF2D1A0586001DF5EB /* HealthMateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FDAE7072D1A0586001DF5EB /* Build configuration list for PBXNativeTarget "HealthMateTests" */;
+			buildPhases = (
+				1FDAE6EC2D1A0586001DF5EB /* Sources */,
+				1FDAE6ED2D1A0586001DF5EB /* Frameworks */,
+				1FDAE6EE2D1A0586001DF5EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FDAE6F22D1A0586001DF5EB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1FDAE6F32D1A0586001DF5EB /* HealthMateTests */,
+			);
+			name = HealthMateTests;
+			packageProductDependencies = (
+			);
+			productName = HealthMateTests;
+			productReference = 1FDAE6F02D1A0586001DF5EB /* HealthMateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1FDAE6F92D1A0586001DF5EB /* HealthMateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FDAE70A2D1A0586001DF5EB /* Build configuration list for PBXNativeTarget "HealthMateUITests" */;
+			buildPhases = (
+				1FDAE6F62D1A0586001DF5EB /* Sources */,
+				1FDAE6F72D1A0586001DF5EB /* Frameworks */,
+				1FDAE6F82D1A0586001DF5EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FDAE6FC2D1A0586001DF5EB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1FDAE6FD2D1A0586001DF5EB /* HealthMateUITests */,
+			);
+			name = HealthMateUITests;
+			packageProductDependencies = (
+			);
+			productName = HealthMateUITests;
+			productReference = 1FDAE6FA2D1A0586001DF5EB /* HealthMateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FDAE6D82D1A0585001DF5EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					1FDAE6DF2D1A0585001DF5EB = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					1FDAE6EF2D1A0586001DF5EB = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 1FDAE6DF2D1A0585001DF5EB;
+					};
+					1FDAE6F92D1A0586001DF5EB = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 1FDAE6DF2D1A0585001DF5EB;
+					};
+				};
+			};
+			buildConfigurationList = 1FDAE6DB2D1A0585001DF5EB /* Build configuration list for PBXProject "HealthMate" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FDAE6D72D1A0585001DF5EB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1FDAE6E12D1A0585001DF5EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FDAE6DF2D1A0585001DF5EB /* HealthMate */,
+				1FDAE6EF2D1A0586001DF5EB /* HealthMateTests */,
+				1FDAE6F92D1A0586001DF5EB /* HealthMateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FDAE6DE2D1A0585001DF5EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDAE6EE2D1A0586001DF5EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDAE6F82D1A0586001DF5EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FDAE6DC2D1A0585001DF5EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDAE6EC2D1A0586001DF5EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDAE6F62D1A0586001DF5EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FDAE6F22D1A0586001DF5EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FDAE6DF2D1A0585001DF5EB /* HealthMate */;
+			targetProxy = 1FDAE6F12D1A0586001DF5EB /* PBXContainerItemProxy */;
+		};
+		1FDAE6FC2D1A0586001DF5EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FDAE6DF2D1A0585001DF5EB /* HealthMate */;
+			targetProxy = 1FDAE6FB2D1A0586001DF5EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1FDAE7022D1A0586001DF5EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FDAE7032D1A0586001DF5EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FDAE7052D1A0586001DF5EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HealthMate/Preview Content\"";
+				DEVELOPMENT_TEAM = TFH7S543G2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenmariani.HealthMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FDAE7062D1A0586001DF5EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HealthMate/Preview Content\"";
+				DEVELOPMENT_TEAM = TFH7S543G2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenmariani.HealthMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1FDAE7082D1A0586001DF5EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TFH7S543G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenmariani.HealthMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HealthMate";
+			};
+			name = Debug;
+		};
+		1FDAE7092D1A0586001DF5EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TFH7S543G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenmariani.HealthMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HealthMate";
+			};
+			name = Release;
+		};
+		1FDAE70B2D1A0586001DF5EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TFH7S543G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenmariani.HealthMateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HealthMate;
+			};
+			name = Debug;
+		};
+		1FDAE70C2D1A0586001DF5EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TFH7S543G2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owenmariani.HealthMateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HealthMate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FDAE6DB2D1A0585001DF5EB /* Build configuration list for PBXProject "HealthMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FDAE7022D1A0586001DF5EB /* Debug */,
+				1FDAE7032D1A0586001DF5EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FDAE7042D1A0586001DF5EB /* Build configuration list for PBXNativeTarget "HealthMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FDAE7052D1A0586001DF5EB /* Debug */,
+				1FDAE7062D1A0586001DF5EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FDAE7072D1A0586001DF5EB /* Build configuration list for PBXNativeTarget "HealthMateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FDAE7082D1A0586001DF5EB /* Debug */,
+				1FDAE7092D1A0586001DF5EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FDAE70A2D1A0586001DF5EB /* Build configuration list for PBXNativeTarget "HealthMateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FDAE70B2D1A0586001DF5EB /* Debug */,
+				1FDAE70C2D1A0586001DF5EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FDAE6D82D1A0585001DF5EB /* Project object */;
+}
