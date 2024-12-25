@@ -12,6 +12,13 @@ struct HealthMateApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            MenuBar()
         }
     }
+}
+
+#Preview
+{
+    ContentView()
+    MenuBar()
 }
