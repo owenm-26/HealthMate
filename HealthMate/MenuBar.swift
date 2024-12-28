@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct MenuBar: View {
-    
+    @State private var buttonActive = "my_goals"
     var body: some View {
         Spacer()
         Rectangle()
@@ -19,24 +19,28 @@ struct MenuBar: View {
         HStack(alignment: .center, spacing: 50) {
            
             Button(action: {
-                print("Seeing Goals")
+                print("Seeing my_goals")
+                buttonActive = "my_goals"
             }) {
-                Label("", systemImage: "heart")
+                Label("", systemImage: buttonActive == "my_goals" ? "heart.fill" : "heart")
                     .foregroundColor(.blue)
+                    
                     .imageScale(Image.Scale.large)
             }
             Button(action: {
-                print("Move to Make Goals")
+                print("Move to make_goals")
+                buttonActive = "make_goals"
             }){
-                Label("", systemImage: "plus.circle")
+                Label("", systemImage: buttonActive == "make_goals" ? "plus.circle.fill" : "plus.circle")
                     .foregroundColor(.blue)
                     .imageScale(Image.Scale.large)
             }
             Button(action: {
                 print("Move to About")
+                buttonActive = "about"
             })
             {
-                Label("", systemImage: "info.circle")
+                Label("", systemImage: buttonActive == "about" ? "info.circle.fill" : "info.circle")
                 .foregroundColor(.blue)
                 .imageScale(Image.Scale.large)
             }
