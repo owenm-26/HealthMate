@@ -11,14 +11,27 @@ import SwiftUI
 struct HealthMateApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-            MenuBar()
+            RootView()
         }
     }
 }
 
-#Preview
-{
-    ContentView()
-    MenuBar()
+struct RootView: View {
+    @State private var hasPassedWelcome: Bool = false
+    
+    var body: some View {
+        Group {
+            if hasPassedWelcome {
+                MenuBar()
+            } else {
+                ContentView(hasPassedWelcome: $hasPassedWelcome)
+            }
+            
+        }
+    }
 }
+
+#Preview {
+    RootView() // Preview the root view with tappable state
+}
+

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Binding var hasPassedWelcome: Bool
     var body: some View {
         VStack {
             Image(systemName: "scalemass.fill")
@@ -21,6 +22,7 @@ struct ContentView: View {
                 
                 Button(action: {
                     print("Set a Goal button tapped.")
+                    hasPassedWelcome.toggle()
                 }, label: {
                     Text("Set a Goal ")
                         .foregroundColor(.white)
@@ -35,5 +37,13 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    StateWrapper()
+}
+
+struct StateWrapper: View {
+    @State private var hasPassedWelcome: Bool = false
+
+    var body: some View {
+        ContentView(hasPassedWelcome: $hasPassedWelcome)
+    }
 }

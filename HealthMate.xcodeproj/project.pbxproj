@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1FB93ACF2D1C6DA6009F66B9 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 1FB93ACE2D1C6DA6009F66B9 /* SwiftfulRouting */; };
+		1FB93AD62D2065C9009F66B9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1FB93AD52D2065C2009F66B9 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1FDAE6F12D1A0586001DF5EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FB93AD52D2065C2009F66B9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		1FDAE6E02D1A0585001DF5EB /* HealthMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDAE6F02D1A0586001DF5EB /* HealthMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDAE6FA2D1A0586001DF5EB /* HealthMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB93ACF2D1C6DA6009F66B9 /* SwiftfulRouting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +79,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FB93ACD2D1C6DA6009F66B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1FDAE6D72D1A0585001DF5EB = {
 			isa = PBXGroup;
 			children = (
+				1FB93AD52D2065C2009F66B9 /* .gitignore */,
 				1FDAE6E22D1A0585001DF5EB /* HealthMate */,
 				1FDAE6F32D1A0586001DF5EB /* HealthMateTests */,
 				1FDAE6FD2D1A0586001DF5EB /* HealthMateUITests */,
+				1FB93ACD2D1C6DA6009F66B9 /* Frameworks */,
 				1FDAE6E12D1A0585001DF5EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +128,7 @@
 			);
 			name = HealthMate;
 			packageProductDependencies = (
+				1FB93ACE2D1C6DA6009F66B9 /* SwiftfulRouting */,
 			);
 			productName = HealthMate;
 			productReference = 1FDAE6E02D1A0585001DF5EB /* HealthMate.app */;
@@ -195,6 +212,9 @@
 			);
 			mainGroup = 1FDAE6D72D1A0585001DF5EB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1FB93ACC2D1C6D67009F66B9 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1FDAE6E12D1A0585001DF5EB /* Products */;
 			projectDirPath = "";
@@ -212,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB93AD62D2065C9009F66B9 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +583,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1FB93ACC2D1C6D67009F66B9 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1FB93ACE2D1C6DA6009F66B9 /* SwiftfulRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FB93ACC2D1C6D67009F66B9 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
+			productName = SwiftfulRouting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FDAE6D82D1A0585001DF5EB /* Project object */;
 }
