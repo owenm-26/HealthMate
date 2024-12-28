@@ -22,9 +22,9 @@ struct RootView: View {
     var body: some View {
         Group {
             if hasPassedWelcome {
-                MenuBar()
+                ContentView()
             } else {
-                ContentView(hasPassedWelcome: $hasPassedWelcome)
+                Welcome(hasPassedWelcome: $hasPassedWelcome)
             }
             
         }
