@@ -7,11 +7,102 @@
 
 import SwiftUI
 
-struct MyGoals: View {
+
+// uncomment other categories once they are supported
+enum GoalType: String{
+    case calories = "Calories"
+    case steps = "Steps"
+//    case distanceWalked = "Distance Walked"
+//    case distanceRun = "Distance Run"
+//    case workouts = "Workouts"
+}
+
+// Interface for Goal Objects
+protocol GoalProtocol {
+    var id: Int { get }
+    var category: GoalType { get }
+    var goalCeiling: Double { get }
+    var dayWindow: Int {get}
+    var repeats: Bool { get }
+}
+
+struct UserGoal: GoalProtocol {
+    let id: Int
+    let category: GoalType
+    let goalCeiling: Double
+    let dayWindow: Int
+    let repeats: Bool
+}
+
+
+struct Goal: View {
+    let goal: UserGoal
+    
+    var windowName: String {
+        var name: String = ""
+        if goal.repeats == true{
+            if goal.dayWindow == 7{
+                name = "Weekly"
+            }
+            else if goal.dayWindow == 1 {
+                name = "Daily"
+            }
+            else if goal.dayWindow == 30 {
+                name = "Monthly"
+            }
+        }
+        else{
+            name = "\(goal.dayWindow)-Day"
+        }
+        
+        name += " \(goal.category.rawValue) Goal"
+        return name
+    }
+    
+
     var body: some View {
-        Text("MyGoals")
+            HStack(alignment: .center, spacing: 20) {
+                Image(systemName: "flame.circle").imageScale(.large).font(.system(size: 30))
+                VStack(alignment: .leading) {
+                    
+                    Text(windowName)
+                        .font(.headline)
+                        .bold()
+
+                    Text("XX / \(goal.goalCeiling, specifier: "%.0f")")
+                        .font(.subheadline)
+                        .foregroundColor(.red)
+                }
+                Spacer()
+            }
+            .padding()
+            .background(Color(.systemGray6))
+            .cornerRadius(8)
+            .shadow(radius: 2)
+        }
+}
+
+struct MyGoals: View {
+    let goals: [UserGoal] = [
+        UserGoal(id: 1, category: .calories, goalCeiling: 500, dayWindow: 1, repeats: true),
+        UserGoal(id: 2, category: .steps, goalCeiling: 10000, dayWindow: 7, repeats: false),
+        UserGoal(id: 3, category: .steps, goalCeiling: 5, dayWindow: 1, repeats: false)
+    ]
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("My Goals")
+                .font(.title)
+                .bold()
+
+            ForEach(goals, id: \.id) { goal in
+                            Goal(goal: goal)
+                        }
+        }
+        .padding()
     }
 }
+
 
 #Preview {
     MyGoals()
