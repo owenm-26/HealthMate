@@ -90,14 +90,17 @@ struct MyGoals: View {
     ]
 
     var body: some View {
+        
         VStack(spacing: 20) {
             Text("My Goals")
-                .font(.title)
                 .bold()
+                .font(.largeTitle)
+            
 
             ForEach(goals, id: \.id) { goal in
                             Goal(goal: goal)
                         }
+            Spacer()
         }
         .padding()
     }
