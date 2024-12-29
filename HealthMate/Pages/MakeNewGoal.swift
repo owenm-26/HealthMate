@@ -19,16 +19,27 @@ struct FormView: View {
     @State private var repeats: Bool = false
     @State private var frequency: Frequency = .Daily
     @State private var startDate = Date()
-    @State private var duration: Int = 1
+    @State private var duration: Int = 7
     
     
     var body: some View {
         NavigationStack {
+            
             Form {
                 GoalSettingSection(category: $category, goalAmount: $goalAmount, startDate: $startDate)
                 TimeSettingSection(duration: $duration, repeats: $repeats, frequency: $frequency)
+                Button(action: {print("Goal Created: \(category)")}){
+                    HStack {
+                        Spacer()
+                        Text("Create New Goal")
+                        Spacer()
+                    }
+                }
+                
+                
+                
             }
-            Button("Create Goal", action: {print("Goal Created: \(category)")})
+            
         }
     }
 }
@@ -73,7 +84,16 @@ struct TimeSettingSection: View {
     
     var body: some View {
         Section("Time Window") {
-            Stepper("Duration", value: $duration, in: 1...30)
+            VStack{
+                Stepper("Days to Complete",  onIncrement: {
+                    self.duration += 1},
+                    onDecrement: {
+                        self.duration -= 1
+                    })
+                Text("\(duration) \(duration == 1 ? " day" : " days")")
+                
+            }
+            
             Toggle("Recurring", isOn: $repeats)
                 
             if repeats {
@@ -82,7 +102,7 @@ struct TimeSettingSection: View {
                     ForEach(Frequency.allCases, id: \.self) { frequency in
                         Text(frequency.rawValue)
                     }
-                }
+                }.pickerStyle(SegmentedPickerStyle())
             }
             }
     }
