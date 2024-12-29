@@ -7,34 +7,6 @@
 
 import SwiftUI
 
-
-// uncomment other categories once they are supported
-enum GoalType: String{
-    case calories = "Calories"
-    case steps = "Steps"
-//    case distanceWalked = "Distance Walked"
-//    case distanceRun = "Distance Run"
-//    case workouts = "Workouts"
-}
-
-// Interface for Goal Objects
-protocol GoalProtocol {
-    var id: Int { get }
-    var category: GoalType { get }
-    var goalCeiling: Double { get }
-    var dayWindow: Int {get}
-    var repeats: Bool { get }
-}
-
-struct UserGoal: GoalProtocol {
-    let id: Int
-    let category: GoalType
-    let goalCeiling: Double
-    let dayWindow: Int
-    let repeats: Bool
-}
-
-
 struct Goal: View {
     let goal: UserGoal
     
