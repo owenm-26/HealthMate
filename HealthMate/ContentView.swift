@@ -34,6 +34,7 @@ struct UserGoal: GoalProtocol {
 }
 
 struct ContentView: View {
+    @StateObject private var dataController = DataController()
     var body: some View {
         TabView {
             MyGoals()
@@ -43,7 +44,7 @@ struct ContentView: View {
             MakeNewGoal()
                 .tabItem {
                     Label("New Goal", systemImage: "plus.circle")
-                }
+                }.environment(\.managedObjectContext, dataController.container.viewContext)
             About()
                 .tabItem {
                     Label("About", systemImage: "info.circle")

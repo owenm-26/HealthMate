@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1FB93ACF2D1C6DA6009F66B9 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 1FB93ACE2D1C6DA6009F66B9 /* SwiftfulRouting */; };
 		1FB93AD62D2065C9009F66B9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1FB93AD52D2065C2009F66B9 /* .gitignore */; };
+		1FE146CB2D22236D0027C10B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1FE146CA2D22236D0027C10B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		1FDAE6E02D1A0585001DF5EB /* HealthMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDAE6F02D1A0586001DF5EB /* HealthMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDAE6FA2D1A0586001DF5EB /* HealthMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FE146CA2D22236D0027C10B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -89,6 +91,7 @@
 		1FDAE6D72D1A0585001DF5EB = {
 			isa = PBXGroup;
 			children = (
+				1FE146CA2D22236D0027C10B /* README.md */,
 				1FB93AD52D2065C2009F66B9 /* .gitignore */,
 				1FDAE6E22D1A0585001DF5EB /* HealthMate */,
 				1FDAE6F32D1A0586001DF5EB /* HealthMateTests */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE146CB2D22236D0027C10B /* README.md in Resources */,
 				1FB93AD62D2065C9009F66B9 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

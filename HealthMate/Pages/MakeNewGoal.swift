@@ -7,19 +7,50 @@
 
 import SwiftUI
 import Combine
+import CoreData
 
-enum Frequency: String, CaseIterable, Identifiable {
-    case Daily, Weekly, Monthly
+enum Frequency: Int16, CaseIterable, Identifiable {
+    case Daily = 1
+    case Weekly = 7
+    case Monthly = 30
     var id: Self { self }
 }
 
 struct FormView: View {
     @State private var category: GoalType = .calories
-    @State private var goalAmount: Int = 1
+    @State private var goalAmount: Int32 = 1
     @State private var repeats: Bool = false
     @State private var frequency: Frequency = .Daily
     @State private var startDate = Date()
-    @State private var duration: Int = 7
+    @State private var duration: Int16 = 7
+    
+    @Environment(\.managedObjectContext) var moc
+    
+    func makeNewGoal(category: GoalType,
+                     goalAmount: Int32,
+                     startDate: Date,
+                     duration: Int16,
+                     repeats: Bool,
+                     frequency: Frequency
+                     ){
+        
+        let newGoal = Goal(context: moc)
+        newGoal.id = UUID()
+        newGoal.category = category.rawValue
+        newGoal.date_start = startDate
+        newGoal.goal_amount = goalAmount
+        newGoal.frequency = frequency.rawValue
+        newGoal.duration = duration
+        newGoal.repeats = repeats
+        
+        do{
+            try moc.save()
+            print("New goal saved: \(newGoal)")
+        }
+        catch{
+            print("Failed to save new goal: \(error.localizedDescription)")
+        }
+    }
     
     
     var body: some View {
@@ -28,7 +59,7 @@ struct FormView: View {
             Form {
                 GoalSettingSection(category: $category, goalAmount: $goalAmount, startDate: $startDate)
                 TimeSettingSection(duration: $duration, repeats: $repeats, frequency: $frequency)
-                Button(action: {print("Goal Created: \(category)")}){
+                Button(action: {makeNewGoal(category: category, goalAmount: goalAmount, startDate: startDate, duration: duration, repeats: repeats, frequency: frequency)}){
                     HStack {
                         Spacer()
                         Text("Create New Goal")
@@ -46,7 +77,7 @@ struct FormView: View {
 
 struct GoalSettingSection: View {
     @Binding var category: GoalType
-    @Binding var goalAmount: Int //come back to this and set it to realistic base values for each category
+    @Binding var goalAmount: Int32 //come back to this and set it to realistic base values for each category
     @Binding var startDate: Date
     var body: some View {
         Section("Goal Setting") {
@@ -57,12 +88,15 @@ struct GoalSettingSection: View {
             LabeledContent {
                 TextField("\(category) Goal", text: Binding(
                     get: { String(goalAmount) },
-                    set: { goalAmount = Int($0) ?? 0 }
+                    set: { goalAmount = Int32($0) ?? 0 }
                 ))
                 .keyboardType(.numberPad)
                 .textFieldStyle(.roundedBorder)
                 .frame(maxWidth: 150)
                 .multilineTextAlignment(.trailing)
+                .onChange(of: goalAmount) {
+                    if $0 < 0 { goalAmount = 1 }
+                }
             } label: {
                 Text("\(category.rawValue) Goal")
                     .font(.headline)
@@ -78,18 +112,20 @@ struct GoalSettingSection: View {
 }
 
 struct TimeSettingSection: View {
-    @Binding var duration: Int
+    @Binding var duration: Int16
     @Binding var repeats: Bool
     @Binding var frequency: Frequency
     
     var body: some View {
         Section("Time Window") {
             VStack{
-                Stepper("Days to Complete",  onIncrement: {
-                    self.duration += 1},
-                    onDecrement: {
+                Stepper("Days to Complete", onIncrement: {
+                    self.duration += 1
+                }, onDecrement: {
+                    if self.duration > 1 {
                         self.duration -= 1
-                    })
+                    }
+                })
                 Text("\(duration) \(duration == 1 ? " day" : " days")")
                 
             }
@@ -100,7 +136,7 @@ struct TimeSettingSection: View {
                 
                 Picker("Frequency", selection: $frequency) {
                     ForEach(Frequency.allCases, id: \.self) { frequency in
-                        Text(frequency.rawValue)
+                        Text("\(frequency.rawValue) \(frequency == .Daily ? "Daily" : frequency == .Weekly ? "Weekly" : "Monthly")")
                     }
                 }.pickerStyle(SegmentedPickerStyle())
             }

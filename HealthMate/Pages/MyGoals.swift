@@ -7,27 +7,28 @@
 
 import SwiftUI
 
-struct Goal: View {
-    let goal: UserGoal
+
+struct GoalCard: View {
+    let goal: Goal
     
     var windowName: String {
         var name: String = ""
         if goal.repeats == true{
-            if goal.dayWindow == 7{
+            if goal.duration == 7{
                 name = "Weekly"
             }
-            else if goal.dayWindow == 1 {
+            else if goal.duration == 1 {
                 name = "Daily"
             }
-            else if goal.dayWindow == 30 {
+            else if goal.duration == 30 {
                 name = "Monthly"
             }
         }
         else{
-            name = "\(goal.dayWindow)-Day"
+            name = "\(goal.duration)-Day"
         }
         
-        name += " \(goal.category.rawValue) Goal"
+        name += " \(goal.category ?? "Your") Goal"
         return name
     }
     
@@ -41,7 +42,7 @@ struct Goal: View {
                         .font(.headline)
                         .bold()
 
-                    Text("XX / \(goal.goalCeiling, specifier: "%.0f")")
+                    Text("XX / \(goal.goal_amount, specifier: "%.0f")")
                         .font(.subheadline)
                         .foregroundColor(.red)
                 }
@@ -55,11 +56,12 @@ struct Goal: View {
 }
 
 struct MyGoals: View {
-    let goals: [UserGoal] = [
-        UserGoal(id: 1, category: .calories, goalCeiling: 500, dayWindow: 1, repeats: true),
-        UserGoal(id: 2, category: .steps, goalCeiling: 10000, dayWindow: 7, repeats: false),
-        UserGoal(id: 3, category: .steps, goalCeiling: 5, dayWindow: 1, repeats: false)
-    ]
+    @FetchRequest(sortDescriptors: []) var userGoals: FetchedResults<Goal>
+//    let goals: [UserGoal] = [
+//        UserGoal(id: 1, category: .calories, goalCeiling: 500, dayWindow: 1, repeats: true),
+//        UserGoal(id: 2, category: .steps, goalCeiling: 10000, dayWindow: 7, repeats: false),
+//        UserGoal(id: 3, category: .steps, goalCeiling: 5, dayWindow: 1, repeats: false)
+//    ]
 
     var body: some View {
         
@@ -69,8 +71,8 @@ struct MyGoals: View {
                 .font(.largeTitle)
             
 
-            ForEach(goals, id: \.id) { goal in
-                            Goal(goal: goal)
+            ForEach(userGoals, id: \.id) { goal in
+                GoalCard(goal: goal)
                         }
             Spacer()
         }
