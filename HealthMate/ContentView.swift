@@ -35,21 +35,24 @@ struct UserGoal: GoalProtocol {
 
 struct ContentView: View {
     @StateObject private var dataController = DataController()
+    
+    
     var body: some View {
+        let context = dataController.container.viewContext
         TabView {
-            MyGoals()
+            MyGoals(moc:context)
                 .tabItem {
                     Label("My Goals", systemImage: "heart.circle")
                 }
-            MakeNewGoal()
+            MakeNewGoal(moc:context)
                 .tabItem {
                     Label("New Goal", systemImage: "plus.circle")
-                }.environment(\.managedObjectContext, dataController.container.viewContext)
+                }
             About()
                 .tabItem {
                     Label("About", systemImage: "info.circle")
                 }
-        }
+        }.environment(\.managedObjectContext, context)
     }
 }
 

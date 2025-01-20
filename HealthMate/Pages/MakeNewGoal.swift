@@ -17,6 +17,7 @@ enum Frequency: Int16, CaseIterable, Identifiable {
 }
 
 struct FormView: View {
+    var moc: NSManagedObjectContext
     @State private var category: GoalType = .calories
     @State private var goalAmount: Int32 = 1
     @State private var repeats: Bool = false
@@ -24,7 +25,7 @@ struct FormView: View {
     @State private var startDate = Date()
     @State private var duration: Int16 = 7
     
-    @Environment(\.managedObjectContext) var moc
+    
     
     func makeNewGoal(category: GoalType,
                      goalAmount: Int32,
@@ -136,7 +137,7 @@ struct TimeSettingSection: View {
                 
                 Picker("Frequency", selection: $frequency) {
                     ForEach(Frequency.allCases, id: \.self) { frequency in
-                        Text("\(frequency.rawValue) \(frequency == .Daily ? "Daily" : frequency == .Weekly ? "Weekly" : "Monthly")")
+                        Text("\(frequency == .Daily ? "Daily" : frequency == .Weekly ? "Weekly" : "Monthly")")
                     }
                 }.pickerStyle(SegmentedPickerStyle())
             }
@@ -145,12 +146,13 @@ struct TimeSettingSection: View {
 }
 
 struct MakeNewGoal: View {
+    var moc: NSManagedObjectContext
     var body: some View {
         VStack{
             Text("New Goal")
                 .bold()
                 .font(.largeTitle)
-            FormView()
+            FormView(moc: moc)
             Spacer()
         }
     }
