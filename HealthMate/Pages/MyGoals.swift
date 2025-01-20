@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 
 struct GoalCard: View {
     let goal: Goal
+    let moc: NSManagedObjectContext
     
     var windowName: String {
         var name: String = ""
@@ -23,6 +25,9 @@ struct GoalCard: View {
             else if goal.duration == 30 {
                 name = "Monthly"
             }
+            else{
+                name = "Repeating \(goal.duration)-Day"
+            }
         }
         else{
             name = "\(goal.duration)-Day"
@@ -34,6 +39,7 @@ struct GoalCard: View {
     
 
     var body: some View {
+        
             HStack(alignment: .center, spacing: 20) {
                 Image(systemName: "flame.circle").imageScale(.large).font(.system(size: 30))
                 VStack(alignment: .leading) {
@@ -42,11 +48,18 @@ struct GoalCard: View {
                         .font(.headline)
                         .bold()
 
-                    Text("XX / \(goal.goal_amount, specifier: "%.0f")")
+                    Text("XX / \(goal.goal_amount)")
                         .font(.subheadline)
                         .foregroundColor(.red)
                 }
                 Spacer()
+                Image(systemName: "trash.fill")
+                                .imageScale(.large)
+                                .font(.system(size: 15))
+                                .onTapGesture {
+                                    moc.delete(goal)
+                                    try? moc.save()
+                                }
             }
             .padding()
             .background(Color(.systemGray6))
@@ -56,6 +69,7 @@ struct GoalCard: View {
 }
 
 struct MyGoals: View {
+    var moc: NSManagedObjectContext
     @FetchRequest(sortDescriptors: []) var userGoals: FetchedResults<Goal>
 //    let goals: [UserGoal] = [
 //        UserGoal(id: 1, category: .calories, goalCeiling: 500, dayWindow: 1, repeats: true),
@@ -70,9 +84,9 @@ struct MyGoals: View {
                 .bold()
                 .font(.largeTitle)
             
-
+            
             ForEach(userGoals, id: \.id) { goal in
-                GoalCard(goal: goal)
+                GoalCard(goal: goal, moc: moc)
                         }
             Spacer()
         }
@@ -81,6 +95,4 @@ struct MyGoals: View {
 }
 
 
-#Preview {
-    MyGoals()
-}
+
